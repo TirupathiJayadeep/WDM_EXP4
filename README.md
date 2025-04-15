@@ -21,7 +21,7 @@ import pandas as pd
 visitor_df=pd.read_csv('clustervisitor.csv')
 
 # Perform segmentation based on characteristics (e.g., age groups)
-
+```
 age_groups = {
     'Young': visitor_df['Age'] <= 30,
     'Middle-aged': (visitor_df['Age'] > 30) & (visitor_df['Age'] <= 50),
@@ -32,7 +32,7 @@ for group, condition in age_groups.items():
     visitors_in_group = visitor_df[condition] 
     print(f"Visitors in {group} age group:")
     print(visitors_in_group)
-
+```
 ### Output:
 ![image](https://github.com/user-attachments/assets/67b6e431-ecec-48a8-8b0f-a07a5154e8aa)
 
@@ -42,11 +42,13 @@ python
 visitor_counts=[]
 
 # Count visitors in each age group
+```
 for group,condition in age_groups.items():
     visitors_in_group=visitor_df[condition]
     visitor_counts.append(len(visitors_in_group))
-    
+```    
 # Define age group labels and plot a bar chart
+```
 import matplotlib.pyplot as plt
 age_group_labels=list(age_groups.keys())
 plt.figure(figsize=(8, 6))
@@ -55,7 +57,7 @@ plt.xlabel('Age Groups')
 plt.ylabel('Number of Visitors')
 plt.title('Visitor Distribution Across Age Groups')
 plt.show()
-
+```
 ### Output:
 ![image](https://github.com/user-attachments/assets/c70b6ee3-868a-45fc-ba13-99d5da0d0719)
 
