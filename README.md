@@ -16,10 +16,11 @@
 ### Program:
 python
 # Visitor segmentation based on characteristics
-# read the data
+# Read the data
+```
 import pandas as pd
 visitor_df=pd.read_csv('clustervisitor.csv')
-
+```
 # Perform segmentation based on characteristics (e.g., age groups)
 ```
 age_groups = {
